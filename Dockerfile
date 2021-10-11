@@ -16,7 +16,7 @@
 
 FROM golang:1.13-alpine AS builder
 
-WORKDIR /go/src/github.com/edgexfoundry/device-modbus-go/simulator
+WORKDIR /go/src/github.com/lefmylonas/device-modbus-go/simulator
 
 RUN sed -e 's/dl-cdn[.]alpinelinux.org/nl.alpinelinux.org/g' -i~ /etc/apk/repositories
 
