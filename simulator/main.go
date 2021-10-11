@@ -18,7 +18,7 @@ import (
 	"syscall"
 
 	"github.com/goburrow/serial"
-	"github.com/tbrandon/mbserver"
+	"github.com/lefmylonas/mbserver"
 )
 
 const (
