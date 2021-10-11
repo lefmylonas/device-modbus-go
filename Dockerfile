@@ -22,7 +22,7 @@ RUN sed -e 's/dl-cdn[.]alpinelinux.org/nl.alpinelinux.org/g' -i~ /etc/apk/reposi
 
 RUN apk update && apk add libsodium-dev pkgconfig build-base git
 
-RUN git clone https://github.com/edgexfoundry/device-modbus-go.git
+RUN git clone https://github.com/lefmylonas/device-modbus-go.git
 
 RUN mv ./device-modbus-go/simulator/* .
 
@@ -33,7 +33,7 @@ FROM scratch
 ENV APP_PORT=1502
 EXPOSE $APP_PORT
 
-COPY --from=builder /go/src/github.com/edgexfoundry/device-modbus-go/simulator /
+COPY --from=builder /go/src/github.com/lefmylonas/device-modbus-go/simulator /
 
 LABEL license='SPDX-License-Identifier: Apache-2.0' \
       copyright='Copyright (c) 2020: IoTech Ltd'
