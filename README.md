@@ -12,14 +12,7 @@ to `ProfilesDir` and `DevicesDir` respectively.
 `modbus.test.device.profile.toml` and `modbus.test.devices.toml` will be loaded and created when the Device Service starts up.
 Users can modify those files or add additional Profile YAML or Device TOML to meet their needs.
 ## Modbus Simulator
-Build and run the Modbus simulator
-```
-$ cd simulator
-$ go build
-$ ./simulator 
-Modbus TCP address: 0.0.0.0:1502 
-Start up a Modbus TCP simulator.
-```
+Build and run a customized version of a Docker-based Modbus simulator based on the [mbserver](https://github.com/tbrandon/mbserver.git) project. For more information, read the README file located in the `/simulator` directory.
 
 ## Community
 - Chat: https://edgexfoundry.slack.com
