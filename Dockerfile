@@ -22,7 +22,7 @@ RUN sed -e 's/dl-cdn[.]alpinelinux.org/nl.alpinelinux.org/g' -i~ /etc/apk/reposi
 
 RUN apk update && apk add libsodium-dev pkgconfig build-base git
 
-RUN git clone https://github.com/lefmylonas/device-modbus-go.git
+RUN git clone -b sim-10-reg https://github.com/lefmylonas/device-modbus-go.git
 
 RUN mv ./device-modbus-go/simulator/* .
 
