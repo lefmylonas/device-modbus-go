@@ -1,12 +1,21 @@
 # Modbus Simulator
 The Modbus Simulator is used to create mock Modbus device for testing purposes. 
 
-In this version of the simulator, a random generator is included, which sets pseudorandom values in the first 10 registers of the Holding Register table in random time intervals, in the range of 0-10 seconds.
+In this version of the simulator a random generator is included, which sets pseudorandom values in a number of registers from the Holding Register table at random time intervals, in the range of 0-10 seconds. In the main version (`main` branch) the generator toggles the value of 1 register at address 1053, while in the second version (`sim-10-reg` branch) the generator changes the values of the first 10 registers of the Holding Register table.
 
 ## Build docker image
-The docker image built with git branch https://github.com/lefmylonas/device-modbus-go/tree/edgex-modbus-simulator
+Each version has its own build branch. In order to build the main version (`main` branch), you must run the following commands:
+
 ```
-git clone -b edgex-modbus-simulator https://github.com/lefmylonas/device-modbus-go.git
+git clone -b build-sim-1-reg https://github.com/lefmylonas/device-modbus-go.git
+cd device-modbus-go/
+sudo docker build -t randgen-modbus-sim .
+```
+
+In order to build the second version (`sim-10-reg` branch):
+
+```
+git clone -b build-sim-10-reg https://github.com/lefmylonas/device-modbus-go.git
 cd device-modbus-go/
 sudo docker build -t randgen-modbus-sim .
 ```
