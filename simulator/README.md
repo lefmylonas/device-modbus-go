@@ -17,7 +17,7 @@ In order to build the second version (`sim-10-reg` branch):
 ```
 git clone -b build-sim-10-reg https://github.com/lefmylonas/device-modbus-go.git
 cd device-modbus-go/
-sudo docker build -t randgen-modbus-sim .
+sudo docker build -t randgen-10-reg-modbus-sim .
 ```
 
 ## Usage
