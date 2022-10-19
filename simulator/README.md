@@ -20,6 +20,14 @@ cd device-modbus-go/
 sudo docker build -t randgen-10-reg-modbus-sim .
 ```
 
+In order to build the third version (`sim-korinthos` branch):
+
+```
+git clone -b build-sim-korinthos https://github.com/lefmylonas/device-modbus-go.git
+cd device-modbus-go/
+sudo docker build -t randgen-sim-korinthos .
+```
+
 ## Usage
 
 1. Create a default simulator with port 1502
